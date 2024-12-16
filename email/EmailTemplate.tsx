@@ -1,4 +1,3 @@
-
 interface EmailTemplateProps {
     username: string,
     otp:string
@@ -8,7 +7,7 @@ interface EmailTemplateProps {
     username,otp
   }) => (
     <div>
-      <h1>Welcome, {username}!</h1>
-      <h1>Your Code: {otp}</h1>
+      <h1 >Welcome, {username}!</h1>
+      <h2 className="font-bold">Your Code: {otp}</h2>
     </div>
   );

@@ -1,4 +1,4 @@
-import { EmailTemplate } from '../../email/EmailTemplate';
+import { EmailTemplate } from './../../email/EmailTemplate';
 import { APIResponseType } from './APIResponse';
 import { resend } from "@/lib/resend";
 
@@ -10,7 +10,7 @@ export async function sendVerificationCode(
     try {
         await resend.emails.send({
             from: 'onboarding@resend.dev',
-            to: email,
+            to: [email],
             subject: 'Anonymous feedbacker Verification Code',
             react: EmailTemplate({ username, otp: verifycode }),
         });
