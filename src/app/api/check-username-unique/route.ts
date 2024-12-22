@@ -12,7 +12,6 @@ export async function GET(request: Request) {
     await dbconnect();
     try {
         const { searchParams } = new URL(request.url);
-
         const querySchema = {
             username: searchParams.get('username')
         }
